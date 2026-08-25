@@ -964,9 +964,7 @@ mod tests {
 
         // Create mock analyzer and client for the test
         use crate::rust_analyzer::RustAnalyzer;
-        use std::path::PathBuf;
         use std::sync::Arc;
-        use tower_lsp::Client;
 
         let analyzer = Arc::new(RustAnalyzer::new());
         let (service, _) = tower_lsp::LspService::new(|client| crate::Backend {
